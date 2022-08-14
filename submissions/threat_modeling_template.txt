@@ -19,8 +19,7 @@ limit mechanisms to prevent a denial of service occurring where one container co
 resources and other containers on the same host are therefore not able to function. Having no limit on memory 
 usage can lead to issues where one container can easily make the whole system unstable and as a result unusable.
 
-5. Elevation of Privilege - Due to traffic network spoofing, an attacker can gain access to the host and other containers. 
-Unnecessary packages should not be installed in the container.
+5. Elevation of Privilege - Running the docker daemon requires elevated privilege. This daemon process being run as root which creates security converns. 
 
 Kubernetes Threat Modeling
 Given Kubernetes' system components and the STRIDE framework, identify five potential threats that may arise.
